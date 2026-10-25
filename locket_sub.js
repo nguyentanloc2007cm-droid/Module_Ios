@@ -1,61 +1,64 @@
-/***********************************************
-> Locket RevenueCat Subscriptions by nguyentanloc
-***********************************************/
-
 // ========= ID ========= //
-const mapping = {
-  '%E8%BD%A6%E7%A5%A8%E7%A5%A8': ['vip+watch_vip'],
-  'Locket': ['Gold']
-};
-
-// ========= NGÀY KÍCH HOẠT GOLD (08/03/2007) ========= //
-var MY_PURCHASE_DATE = "2007-03-08T10:10:14Z"; // Ngày bắt đầu có Gold
-var MY_EXPIRES_DATE  = "9999-03-08T10:10:14Z"; // Ngày hết hạn Gold
-
-// ========= Xử lý dữ liệu ========= //
+// Locket: Gold + Filter Pack
+// @tanloc07
+// ========= Phần cố định ========= //
 var ua = $request.headers["User-Agent"] || $request.headers["user-agent"],
     obj = JSON.parse($response.body);
 
-if (obj && obj.subscriber) {
-    obj.Attention = "Chúc mừng bạn! Vui lòng không bán hoặc chia sẻ cho người khác!";
-    
-    var nguyencongan = {
+obj.Attention = "Chúc mừng bạn!";
+
+var FAR_FUTURE = "9999-01-09T10:10:14Z";
+var PAST = "2007-03-08T10:10:14Z";
+
+function makeSub(productId, priceAmount, priceCurrency) {
+    return {
         auto_resume_date: null,
-        display_name: "locket_1600_1y",
+        display_name: productId,
         is_sandbox: true,
         ownership_type: "PURCHASED",
         billing_issues_detected_at: null,
         management_url: "https://apps.apple.com/account/subscriptions",
         period_type: "normal",
         price: {
-            "amount": 399000.0,
-            "currency": "VND"
+            amount: priceAmount,
+            currency: priceCurrency
         },
-        expires_date: "9999-01-09T10:10:14Z",
+        expires_date: FAR_FUTURE,
         grace_period_expires_date: null,
         refunded_at: null,
         unsubscribe_detected_at: null,
-        original_purchase_date: MY_PURCHASE_DATE,
-        purchase_date: MY_PURCHASE_DATE,
+        original_purchase_date: PAST,
+        purchase_date: PAST,
         store: "app_store",
-        store_transaction_id: "2000001108724193",
-    },
-    locketGold = {
-        grace_period_expires_date: null,
-        purchase_date: MY_PURCHASE_DATE,
-        product_identifier: "locket_1600_1y",
-        expires_date: "9999-01-09T10:10:14Z"
+        store_transaction_id: "2000001108724193"
     };
-
-    const match = Object.keys(mapping).find(e => ua.includes(e));
-    if (match) {
-        let [e, s] = mapping[match];
-        s ? (locketGold.product_identifier = s, obj.subscriber.subscriptions[s] = nguyentanloc) : obj.subscriber.subscriptions["locket_1600_1y"] = nguyentanloc, obj.subscriber.entitlements[e] = locketGold;
-    } else {
-        obj.subscriber.subscriptions["locket_1600_1y"] = nguyencongan;
-        obj.subscriber.entitlements.pro = locketGold;
-    }
 }
+
+function makeEnt(productId) {
+    return {
+        grace_period_expires_date: null,
+        purchase_date: PAST,
+        product_identifier: productId,
+        expires_date: FAR_FUTURE
+    };
+}
+
+obj.subscriber = obj.subscriber || {};
+obj.subscriber.subscriptions = obj.subscriber.subscriptions || {};
+obj.subscriber.entitlements = obj.subscriber.entitlements || {};
+
+// ========== 1. UNLOCK GOLD ==========
+var goldProduct = "locket_1600_1y";
+obj.subscriber.subscriptions[goldProduct] = makeSub(goldProduct, 399000.0, "VND");
+obj.subscriber.entitlements["Gold"] = makeEnt(goldProduct);
+
+// ========== 2. UNLOCK FILTER PACK ==========
+var pack10Product = "com.locket.Locket.FilterPack_10Photos_400";
+obj.subscriber.subscriptions[pack10Product] = makeSub(pack10Product, 0.0, "USD");
+obj.subscriber.entitlements["effect_pack_10"] = makeEnt(pack10Product);
+var pack20Product = "com.locket.Locket.FilterPack_20Photos_500";
+obj.subscriber.subscriptions[pack20Product] = makeSub(pack20Product, 0.0, "USD");
+obj.subscriber.entitlements["effect_pack_20"] = makeEnt(pack20Product);
 
 $done({
     body: JSON.stringify(obj)

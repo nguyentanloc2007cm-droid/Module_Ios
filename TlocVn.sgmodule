@@ -59,13 +59,6 @@ SoundCloudGo+=type=http-response,pattern=https://api-mobile.soundcloud.com/confi
 spotify-json = type=http-request,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
 spotify-proto = type=http-response,pattern=^https:\/\/(spclient\.wg\.spotify\.com|.*-spclient\.spotify\.com(:443)?)\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
   
-
-# RevenueCat Response
-revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/andanh447/locketgold_tool/refs/heads/main/revenuecatDHT.js, requires-body=true, max-size=-1, timeout=60
-
-# RevenueCat Request Header
-deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/tloc08vn/Module_Ios/refs/heads/main/Locket_Unlocked.js, timeout=60
-
 #LocketGold
 #hostname = api.revenuecat.com, firebaseremoteconfig.googleapis.com
 revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/locket_sub.js, requires-body=true, max-size=-1, timeout=60

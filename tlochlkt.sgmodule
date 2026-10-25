@@ -1,4 +1,4 @@
-#!name= All_In_All_Mode
+#!name= Tloc Vn
 #!desc=Crack mọi app premium vip pro bởi TanLocvn (Tanloc0803)
 #!author=Tanloc0803
 #!homepage=https://note3s.top/notes/WM6212,https://note3s.top/notes/NZQQMJ
@@ -70,7 +70,7 @@ deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(
 #hostname = api.revenuecat.com, firebaseremoteconfig.googleapis.com
 revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/locket_sub.js, requires-body=true, max-size=-1, timeout=60
 deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/deletelHeader.js, timeout=60
-locket_rc = type=http-response, pattern=^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-4252a\/.+, script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/Locket_Unlocked.js, requires-body=true, max-size=-1, timeout=60
+locket_rc = type=http-response, pattern=^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-4252a\/.+, script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/Lockethlkt_Unlocked.js, requires-body=true, max-size=-1, timeout=60
 #************************************#
 
 [MITM]

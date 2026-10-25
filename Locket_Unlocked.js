@@ -56,7 +56,7 @@ if (ua.includes("Locket")) {
             feature_set: [
                 {
                     title: "chúc bạn sử dụng locket vui vẻ",
-                    body: "có gì cứ alooo mềnh 💛",
+                    body: "có gì cứ alooo Tlocc 💛",
                     imageURL: "https://i.ibb.co/q6sNfq5/kawaii.gif"
                 }
             ],

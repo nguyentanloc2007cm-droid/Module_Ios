@@ -1,6 +1,6 @@
 #!desc=Được tổng hợp bởi Tanloc
 #!author=Tanloc
-#!moduleUrl=https://raw.githubusercontent.com/usatalk/allpre/refs/heads/main/allnotlk.sgmodule
+#!moduleUrl=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/All10.sgmodule
 
 [Rule]
 AND,((DOMAIN-SUFFIX,googlevideo.com),(PROTOCOL,UDP)),REJECT

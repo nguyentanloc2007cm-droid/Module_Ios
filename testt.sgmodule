@@ -62,7 +62,7 @@ VSCO = type=http-request ^https://api.revenuecat.com/.+/(receipts$|subscribers/?
 
 #AlightMotion
 #hostname = us-central1-alight-creative.cloudfunctions.net
-AlightMotion = type=http-response,script-path=https://raw.githubusercontent.com/usatalk/allpre/refs/heads/main/AlightMotion.js,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses,max-size=131072,requires-body=true,timeout=10,enable=true
+AlightMotion = type=http-response,script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/AlightMotion.js,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses,max-size=131072,requires-body=true,timeout=10,enable=true
 #************************************#
 
 #PicsArt

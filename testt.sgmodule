@@ -119,7 +119,7 @@ Snow = type=http-response, pattern=^https?:\/\/user-snow-api\.snow\.me\/v\d\/pur
 
 #Meitu
 #hostname = h5.xiuxiu.meitu.com, api.xiuxiu.meitu.com
-Meitu = type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,requires-body=1,script-path=https://raw.githubusercontent.com/usatalk/allpre/refs/heads/main/MeiTuXiuXiu.js
+Meitu = type=http-response,pattern=^https?:\/\/(h5|api)\.xiuxiu\.meitu\.com\/v\d\/(h\d\/vip|vip|user)\/,requires-body=1,script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/MeiTuXiuXiu.js
 #************************************#
 
 [Map Local]

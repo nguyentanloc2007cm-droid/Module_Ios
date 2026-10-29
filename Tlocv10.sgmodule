@@ -114,7 +114,7 @@ iTunes = type=http-response, pattern=^https?:\/\/buy\.itunes\.apple\.com\/verify
 
 #Snow
 #hostname = user-snow-api.snow.me
-Snow = type=http-response, pattern=^https?:\/\/user-snow-api\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status, script-path=https://raw.githubusercontent.com/usatalk/allpre/refs/heads/main/Snow.js, requires-body=true, max-size=-1, timeout=60
+Snow = type=http-response, pattern=^https?:\/\/user-snow-api\.snow\.me\/v\d\/purchase\/subscription\/subscriber\/status, script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/Snow.js, requires-body=true, max-size=-1, timeout=60
 #************************************#
 
 #Meitu

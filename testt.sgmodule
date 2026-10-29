@@ -93,7 +93,7 @@ Kinemaster = type=http-response,pattern=^https:\/\/api-account\.kinemasters\.com
 
 #CamScanner
 #hostname = ap*.intsig.net
-Camscanner = requires-body=1,script-path=https://raw.githubusercontent.com/dinhduyvinh09/AppPre/refs/heads/main/js/camScanner.js,type=http-response,pattern= https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\?
+Camscanner = requires-body=1,script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/camScanner.js,type=http-response,pattern= https:\/\/(api|api-cs.*)\.intsig\.net\/purchase\/cs\/query_property\?
 #************************************#
 
 #BeautyPlus

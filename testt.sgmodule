@@ -73,7 +73,7 @@ PicsArtStorages = type=http-response,pattern=^https:\/\/api\.picsart\.com\/gw-v2
 
 #Wink
 #hostname = api-sub.meitu.com
-Wink =type=http-response,pattern=^https:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json,requires-body=1,script-path=https://raw.githubusercontent.com/usatalk/allpre/refs/heads/main/WinkVipCrack.js
+Wink =type=http-response,pattern=^https:\/\/api-sub\.meitu\.com\/v2\/user\/vip_info_by_group\.json,requires-body=1,script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/WinkVipCrack.js
 #************************************#
 
 #Truecaller

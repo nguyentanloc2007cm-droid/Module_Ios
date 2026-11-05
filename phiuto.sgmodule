@@ -106,7 +106,7 @@ Truecaller = type=http-response,pattern=^https:\/\/premium-[^.]+\.truecaller\.co
 
 #Lightroom
 #hostname =  photos.adobe.io
-Lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v\d\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/long788/Module_IOS/refs/heads/main/js/lightroom.js,script-update-interval=-1
+Lightroom = type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v\d\/accounts,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/nguyentanloc2007cm-droid/Module_Ios/refs/heads/main/lightroom.js,script-update-interval=-1
 #************************************#
 
 #Kinemaster

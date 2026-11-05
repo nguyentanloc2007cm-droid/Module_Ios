@@ -24,7 +24,7 @@ var locketGod = {
       refunded_at: null,
       unsubscribe_detected_at: null,
       original_purchase_date: "2007-08-03T10:10:15Z",
-      purchase_date: "2006-05-03T10:10:14Z",
+      purchase_date: "2007-08-03T10:10:14Z",
       store: "app_store",
       store_transaction_id: "2000001108724193",
   },
